@@ -1,3 +1,5 @@
-let driver = ["Harman","James","Jessica", "Kacper",'Roheel', "Simone", "Sukh", "Tim"]
+let drivers = ["Harman","James","Jessica", "Kacper",'Roheel', "Simone", "Sukh", "Tim"]
 
-console.log(driver[0])
+
+const driverSelector = Math.floor(Math.random() * drivers.length);
+console.log(drivers[driverSelector]);
