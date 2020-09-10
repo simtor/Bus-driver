@@ -1,6 +1,7 @@
 let drivers = ["Harman","James","Jessica", "Kacper",'Roheel', "Simone", "Sukh", "Tim"]
 
-setTimeout(driversTimer, 1500);
+// setTimeout(driversTimer, 1500);
+setInterval(driversTimer, 1000);
 
 console.log("Simone Ram")
 
