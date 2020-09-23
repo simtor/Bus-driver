@@ -2,7 +2,6 @@ let drivers = ["Harman","James","Jessica", "Kacper",'Roheel', "Simone", "Sukh", 
 
 let notSameDriver = []
 
-// setTimeout(driversTimer, 1500);
 // setInterval(driversTimer, 300000);
 setInterval(driversTimer, 1000);
 
@@ -12,8 +11,16 @@ function driversTimer(){
     const driverSelector = Math.floor(Math.random() * drivers.length);
     notSameDriver.push(driverSelector);
     console.log(drivers[driverSelector]);
-    console.log(notSameDriver)
+    // console.log(notSameDriver)
+    if(notSameDriver.includes(driverSelector)){
+        console.log(notSameDriver)
+        console.log("Right")
+    }else{
+        console.log("wrong")
+    }
 }
+
+driversTimer()
 
 // function notDouble(driverSelector){
 //     let foundDouble = notSameDriver.includes(driverSelector)
@@ -26,9 +33,6 @@ function driversTimer(){
 // }
 
 // notDouble();
-
-driversTimer()
-
 
 // function driversTimer(){
 //     let driverSelector;
