@@ -11,14 +11,8 @@ console.log("Driver selector started: ")
 function driversTimer(){
     const driverSelector = Math.floor(Math.random() * drivers.length);
     notSameDriver.push(driverSelector);
-    console.log(notSameDriver)
-    // console.log(drivers[driverSelector]);
-    
+    console.log(drivers[driverSelector]);
     // console.log(notSameDriver)
-}
-
-function doubleDriver(){
-    
 }
 driversTimer()
 
