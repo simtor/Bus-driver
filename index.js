@@ -1,40 +1,47 @@
 let drivers = ["Harman","James","Jessica", "Kacper",'Roheel', "Simone", "Sukh", "Tim"]
 
-// let notSameDriver = []
+let notSameDriver = []
 
 // setInterval(driversTimer, 300000);
 setInterval(driversTimer, 1000);
 
 console.log("Driver selector started: ")
-
+console.log(drivers)
 function driversTimer(){
-    ranNums = [],
-    i = drivers.length,
-    j = 0;
+    const driverSelector = Math.floor(Math.random() * drivers.length);
+    notSameDriver.push(driverSelector);
+    console.log(drivers[driverSelector]);
+    let index = drivers.indexOf(drivers[driverSelector]);
+    drivers.splice(index,1);
+    console.log(drivers)
 
-while (i--) {
-    j = Math.floor(Math.random() * (i+1));
-    console.log(ranNums)
-    ranNums.push(drivers[j]);
-    // console.log(ranNums)
-    // drivers.splice(j,1);
-}
-   
-}
+    // drivers.splice(drivers[driverSelector])
+    // if(notSameDriver.includes(driverSelector)){
+    //     const driverSelector2 = Math.floor(Math.random() * drivers.length);
+    //     console.log(drivers[driverSelector], "changed");
+    // }else{
+    //     console.log(drivers[driverSelector], "not changed");
+    // }
+    // console.log(notSameDriver
 
+}
 driversTimer()
 
 
- // const driverSelector = Math.floor(Math.random() * drivers.length);
-    // notSameDriver.push(driverSelector);
-    // console.log(drivers[driverSelector]);
-    // // console.log(notSameDriver)
-    // if(notSameDriver.includes(driverSelector)){
-    //     console.log(notSameDriver)
-    //     console.log("Right")
-    // }else{
-    //     console.log("wrong")
-    // }
+
+// function driversTimer(){
+//     ranNums = [],
+//     i = drivers.length,
+//     j = 0;
+// while (i--) {
+//     j = Math.floor(Math.random() * (i+1));
+//     ranNums.push(drivers[j]);
+//     console.log(ranNums)
+//     // console.log(ranNums)
+//     // drivers.splice(j,1);
+// }
+   
+// }
 
 // function notDouble(driverSelector){
 //     let foundDouble = notSameDriver.includes(driverSelector)
