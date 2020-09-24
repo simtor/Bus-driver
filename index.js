@@ -1,19 +1,25 @@
 let drivers = ["Harman","James","Jessica", "Kacper",'Roheel', "Simone", "Sukh", "Tim"]
 
-let notSameDriver = []
+// let notSameDriver = []
 
 // setInterval(driversTimer, 300000);
-setInterval(driversTimer, 1000);
+// setInterval(driversTimer, 1000);
+let timerStopper = 0;
 
 console.log("Driver selector started: ")
-console.log(drivers)
+// console.log(drivers)
 function driversTimer(){
     const driverSelector = Math.floor(Math.random() * drivers.length);
-    notSameDriver.push(driverSelector);
+    // notSameDriver.push(driverSelector);
     console.log(drivers[driverSelector]);
     let index = drivers.indexOf(drivers[driverSelector]);
     drivers.splice(index,1);
     console.log(drivers)
+    timerStopper++;
+    if(timerStopper < 8){
+        setTimeout(driversTimer, 1000)
+    }
+    console.log(timerStopper);
 
     // drivers.splice(drivers[driverSelector])
     // if(notSameDriver.includes(driverSelector)){
