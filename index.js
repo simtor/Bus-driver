@@ -9,14 +9,13 @@ function driversTimer(){
     console.log(drivers[driverSelector]);
     let index = drivers.indexOf(drivers[driverSelector]);
     drivers.splice(index,1);
-    console.log(drivers)
+    // console.log(drivers)
     timerStopper++;
     if(timerStopper < 8){
-        setTimeout(driversTimer, 1000)
+        // setTimeout(driversTimer, 300000)
+        setTimeout(driversTimer, 10)
     }
-    console.log(timerStopper);
+    // console.log(timerStopper);
 
 }
 driversTimer()
-
-
