@@ -8,9 +8,11 @@ function driversTimer(){
     const driverSelector = Math.floor(Math.random() * drivers.length);
     console.log(drivers[driverSelector]);
     let index = drivers.indexOf(drivers[driverSelector]);
+    drivers.splice(index,1);
     timerStopper++;
     if(timerStopper < 8){
         setTimeout(driversTimer, 300000)
     }
+
 }
 driversTimer()
