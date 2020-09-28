@@ -13,6 +13,5 @@ function driversTimer(){
     if(timerStopper < 8){
         setTimeout(driversTimer, 300000)
     }
-
 }
 driversTimer()
