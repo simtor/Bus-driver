@@ -12,8 +12,8 @@ function driversTimer(){
     drivers.splice(index,1);
     timerStopper++;
     if(timerStopper < 8){
-        // setTimeout(driversTimer, 300000)
-        setTimeout(driversTimer, 6000)
+        setTimeout(driversTimer, 300000)
+        // setTimeout(driversTimer, 6000)
     }
     exec("afplay Left.mp3");
 }
