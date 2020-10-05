@@ -1,5 +1,26 @@
 const { exec } = require("child_process");
-let drivers = ["Harman","James","Jessica", "Kacper",'Roheel', "Simone", "Sukh", "Tim"]
+const readline = require('readline');
+var log = console.log;
+const rl = readline.createInterface({
+    input : process.stdin, 
+    output : process.stdout
+  });
+
+// // let drivers = ["Harman","James","Jessica", "Kacper",'Roheel', "Simone", "Sukh", "Tim"]
+
+let drivers = []
+
+
+var recursiveAsyncReadLine = function () {
+  rl.question('Names of the drivers: ', function (answer) {
+      drivers.push(answer);
+    if (answer == 'exit') //we need some base case, for recursion
+      return rl.close(); //closing RL and returning from function.
+    recursiveAsyncReadLine(); //Calling this function again to ask new question
+  });
+};
+
+recursiveAsyncReadLine(); //we have to actually start our recursion somehow
 
 
 let timerStopper = 0;
@@ -11,7 +32,6 @@ function driversTimer(){
     let index = drivers.indexOf(drivers[driverSelector]);
     drivers.splice(index,1);
     timerStopper++;
-    // if(timerStopper < 8){
     if(drivers.length > 0){
         // setTimeout(driversTimer, 300000)
         setTimeout(driversTimer, 6000)
@@ -19,3 +39,50 @@ function driversTimer(){
     exec("afplay Left.mp3");
 }
 driversTimer()
+
+
+
+//-----------------------------------------------------------
+
+
+// rl.question(`What's your name? `, (name) => {
+//     rl.question(`What are you from? `, (country) => {
+//         console.log(`${name} is from ${country}`);
+//         rl.close();
+//     });
+// });
+
+// let i =0;
+// rl.question('How many times to you want ot repeat: ', driverData)
+// function driverData(driverAmount){
+//     while(i < driverAmount){
+//         rl.question("Names of the drivers: ",function(answer) {
+//             drivers.push(answer);
+//             console.log(drivers)
+//         });
+//         // console.log('Simone Ram');
+//         i++;
+//     }
+// }
+
+// var count = 0;
+// while(count < 10){
+//     rl.question("What is your favourite food: ",function(answer) {
+//         console.log('Oh, so your favorite food is ' + answer);
+//     });
+
+//     count ++;
+// }
+
+// rl.question("Names of drivers: ", driversInput)
+// function driversInput(driversName){
+//     drivers.push(driversName);
+//     // console.log(drivers)
+// }
+
+// driverData();
+
+
+
+
+
