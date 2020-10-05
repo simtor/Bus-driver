@@ -11,9 +11,10 @@ function driversTimer(){
     let index = drivers.indexOf(drivers[driverSelector]);
     drivers.splice(index,1);
     timerStopper++;
-    if(timerStopper < 8){
-        setTimeout(driversTimer, 300000)
-        // setTimeout(driversTimer, 6000)
+    // if(timerStopper < 8){
+    if(drivers.length > 0){
+        // setTimeout(driversTimer, 300000)
+        setTimeout(driversTimer, 6000)
     }
     exec("afplay Left.mp3");
 }
