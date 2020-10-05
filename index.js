@@ -6,12 +6,14 @@ const rl = readline.createInterface({
     output : process.stdout
   });
 
-// // let drivers = ["Harman","James","Jessica", "Kacper",'Roheel', "Simone", "Sukh", "Tim"]
-
+setTimeout(driversTimer, 25000)
 let drivers = []
+let timerStopper = 0;
+console.log("Driver selector started: ")
 
 
-var recursiveAsyncReadLine = function () {
+
+let recursiveAsyncReadLine = function () {
   rl.question('Names of the drivers: ', function (answer) {
       drivers.push(answer);
     if (answer == 'exit') //we need some base case, for recursion
@@ -19,13 +21,8 @@ var recursiveAsyncReadLine = function () {
     recursiveAsyncReadLine(); //Calling this function again to ask new question
   });
 };
-
 recursiveAsyncReadLine(); //we have to actually start our recursion somehow
 
-
-let timerStopper = 0;
-
-console.log("Driver selector started: ")
 function driversTimer(){
     const driverSelector = Math.floor(Math.random() * drivers.length);
     console.log(drivers[driverSelector]);
@@ -38,7 +35,7 @@ function driversTimer(){
     }
     exec("afplay Left.mp3");
 }
-driversTimer()
+
 
 
 
@@ -83,6 +80,5 @@ driversTimer()
 // driverData();
 
 
-
-
+// let drivers = ["Harman","James","Jessica", "Kacper",'Roheel', "Simone", "Sukh", "Tim"]
 
