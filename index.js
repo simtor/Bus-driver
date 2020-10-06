@@ -11,17 +11,15 @@ let drivers = []
 let timerStopper = 0;
 console.log("Driver selector started: ")
 
-
-
 let recursiveAsyncReadLine = function () {
   rl.question('Names of the drivers: ', function (answer) {
       drivers.push(answer);
-    if (answer == 'exit') //we need some base case, for recursion
-      return rl.close(); //closing RL and returning from function.
-    recursiveAsyncReadLine(); //Calling this function again to ask new question
+    if (answer == 'exit') 
+      return rl.close();
+    recursiveAsyncReadLine(); 
   });
 };
-recursiveAsyncReadLine(); //we have to actually start our recursion somehow
+recursiveAsyncReadLine();
 
 function driversTimer(){
     const driverSelector = Math.floor(Math.random() * drivers.length);
