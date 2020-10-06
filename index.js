@@ -6,10 +6,20 @@ const rl = readline.createInterface({
     output : process.stdout
   });
 
-setTimeout(driversTimer, 25000)
+setTimeout(driversTimer, 30000)
+setTimeout(reminder, 30000)
+// console.log("Driver selector started: ") 
+
 let drivers = []
 let timerStopper = 0;
-console.log("Driver selector started: ")
+
+
+function reminder(){
+  console.log("Driver selector started: ");
+}
+
+console.log("Please enter the names of the driver below");
+console.log("You have 30 seconds to input thr drivers numbers");
 
 let recursiveAsyncReadLine = function () {
   rl.question('Names of the drivers: ', function (answer) {
