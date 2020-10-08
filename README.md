@@ -1,9 +1,12 @@
 # Bus-driver
 
+Small node.js program allows the user to input names and then outputs the names in random order every 5 minutes using a timer and every five minute a soung alert would be triggred.
 
 # Features:
-
-
+- Timer 
+- Readline
+- Sound alert
+- Random output
 
 ## Installation
 **On your terminal console**
