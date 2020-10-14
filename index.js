@@ -10,6 +10,13 @@ setTimeout(driversTimer, 30000)
 setTimeout(reminder, 30000)
 // console.log("Driver selector started: ") 
 
+setTimeout(
+  () => {
+    console.log('Hello after 4 seconds');
+  },
+  4 * 1000
+);
+
 let drivers = []
 let timerStopper = 0;
 
