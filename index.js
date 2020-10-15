@@ -1,18 +1,14 @@
 const { exec } = require("child_process");
 const readline = require('readline');
-var log = console.log;
 const rl = readline.createInterface({
     input : process.stdin, 
     output : process.stdout
   });
 
 setTimeout(driversTimer, 30000)
-// setTimeout(reminder, 30000)
-// console.log("Driver selector started: ") 
 
 setTimeout(
   () => {
-    // console.log('Hello after 4 seconds');
     console.log("Driver selector started: ");
   },
   30000
@@ -21,10 +17,6 @@ setTimeout(
 let drivers = []
 let timerStopper = 0;
 
-
-// function reminder(){
-//   console.log("Driver selector started: ");
-// }
 
 console.log("Please enter the names of the driver below");
 console.log("You have 30 seconds to input thr drivers numbers");
