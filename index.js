@@ -7,23 +7,24 @@ const rl = readline.createInterface({
   });
 
 setTimeout(driversTimer, 30000)
-setTimeout(reminder, 30000)
+// setTimeout(reminder, 30000)
 // console.log("Driver selector started: ") 
 
 setTimeout(
   () => {
-    console.log('Hello after 4 seconds');
+    // console.log('Hello after 4 seconds');
+    console.log("Driver selector started: ");
   },
-  4 * 1000
+  30000
 );
 
 let drivers = []
 let timerStopper = 0;
 
 
-function reminder(){
-  console.log("Driver selector started: ");
-}
+// function reminder(){
+//   console.log("Driver selector started: ");
+// }
 
 console.log("Please enter the names of the driver below");
 console.log("You have 30 seconds to input thr drivers numbers");
